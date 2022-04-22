@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 500px;
+  min-width: 50px;
+  margin: 30px auto;
+  padding: 30px;
+
+  outline: 2px solid tomato;
+}
+
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.71;
+  text-align: center;
+}
+
+span {
+  font-weight: 700;
+  color: teal;
+}
