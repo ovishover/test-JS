@@ -391,6 +391,15 @@
 
 // calculateTotalPrice("Scanner");
 
-const string = "Welcome to the future";
+// const string = "Welcome to the future";
 
-console.log(string.split("").reverse().join(""));
+// console.log(string.split("").reverse().join(""));
+
+// задача 33 автопроверка, модуль 3(JS)
+// Change code below this line
+function findMatches(array, ...args) {
+  const matches = []; // Don't change this line
+
+  // Change code above this line
+  return matches;
+}
