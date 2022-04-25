@@ -391,6 +391,54 @@
 
 // calculateTotalPrice("Scanner");
 
-const string = "Welcome to the future";
+// const string = "Welcome to the future";
 
-console.log(string.split("").reverse().join(""));
+// console.log(string.split("").reverse().join(""));
+
+// const rawObj = {
+//   name: "Moonlight",
+//   radius: 4564,
+// };
+
+// console.log(rawObj);
+// console.log((rawObj.color = "milk"));
+// console.log(rawObj);
+
+// const logicE10 =
+//   "C1-6-D, C1-6VN-D, C2-6b-D, C2-9-D, C2-9VN-D, C2-7-D, C2-7VN-D, C3-10-D, IC5-9-D, L2-9-D, L2-9VN-D, L3-9i-D, L3-12-D, M5Sc-D, ML6-15-D, RAB6-D, RIC5-9-D";
+// const logiqE10s =
+//   "C1-6-D, C1-6VN-D, C2-9-D, C2-9VN-D, C2-7-D, C2-7VN-D, C3-10-D, IC5-9-D, L2-9-D, L2-9VN-D, L3-12-D, M5Sc-D, ML6-15-D, RAB6-D, RIC5-9-D";
+
+// searchProbes(logicE10, logiqE10s);
+
+// const qw1 =
+//   "C1-6VN-D, C2-9VN-D, C2-7VN-D, C3-10-D, L2-9VN-D, ML6-15-D, IC5-9-D, L8-18i-D, C2-6b-D, M5Sc-D";
+// const qw2 =
+//   "C1-6VN-D, C2-9VN-D, C2-7VN-D, C3-10-D, L2-9VN-D, ML6-15-D, IC5-9-D, L8-18i-D, M5Sc-D";
+
+// searchProbes(qw1, qw2);
+
+// function searchProbes(lineOne, lineTwo) {
+//   let finalLine = [];
+//   lineOne = lineOne.split(", ");
+//   lineTwo = lineTwo.split(", ");
+//   for (let string of lineOne) {
+//     if (!lineTwo.includes(string)) {
+//       finalLine.push(string);
+//     }
+//   }
+//   console.log(finalLine);
+// }
+
+const bookShelf = {
+  books: ["The last kingdom", "Haze", "The guardian of dreams"],
+  updateBook(oldName, newName) {
+    oldName = this.books.indexOf(oldName);
+
+    console.log(newName);
+  },
+};
+
+bookShelf.updateBook("Haze", "The guardian of dreams");
+
+console.log(bookShelf);
