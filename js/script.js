@@ -452,15 +452,22 @@
 //   console.log(finalLine);
 // }
 
-const bookShelf = {
-  books: ["The last kingdom", "Haze", "The guardian of dreams"],
-  updateBook(oldName, newName) {
-    oldName = this.books.indexOf(oldName);
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     oldName = this.books.indexOf(oldName);
+//     this.books.splice(oldName, 1, newName);
+//     console.log(oldName);
+//   },
+// };
 
-    console.log(newName);
-  },
-};
+// console.log(bookShelf);
 
-bookShelf.updateBook("Haze", "The guardian of dreams");
+// bookShelf.updateBook("Haze", "Dungeon chronicles");
 
-console.log(bookShelf);
+// const array = ["The last kingdom", "Haze", "The guardian of dreams"];
+// console.log(array);
+// let oldName = array.indexOf("Haze");
+// array.splice(oldName, 1, "Dungeon chronicles");
+
+// console.log(array);
