@@ -395,6 +395,28 @@
 
 // console.log(string.split("").reverse().join(""));
 
+// задача 33 автопроверка, модуль 3(JS)
+
+// function findMatches(array, ...arg) {
+//   const matches = [];
+//   for (let number of arg) {
+//     if (array.includes(number)) {
+//       matches.push(number);
+//     }
+//   }
+//   //   return matches;
+//   console.log(matches);
+// }
+
+// findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2);
+
+// const numbers = [];
+// console.log(numbers);
+// numbers.push(52, 45);
+// console.log(numbers);
+// // numbers = 10;
+// console.log(numbers);
+
 // const rawObj = {
 //   name: "Moonlight",
 //   radius: 4564,
