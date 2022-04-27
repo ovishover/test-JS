@@ -546,7 +546,7 @@ const atTheOldToad = {
   ],
   // Change code below this line
   getPotions() {
-    return Object.values(this.potions);
+    return this.potions;
   },
   addPotion(newPotion) {
     if (this.potions.includes(newPotion)) {
