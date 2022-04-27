@@ -471,3 +471,67 @@
 // array.splice(oldName, 1, "Dungeon chronicles");
 
 // console.log(array);
+const Transaction = {
+  DEPOSIT: "deposit",
+  WITHDRAW: "withdraw",
+};
+
+const account = {
+  balance: 0,
+  transactions: [],
+  _currentId: 0,
+  createTransaction(amount, type) {
+    return {
+      id: this._currentId++,
+      amount,
+      type,
+    };
+  },
+  deposit(amount) {
+    const transaction = this.createTransaction(amount, Transaction.DEPOSIT);
+    this.transactions.push(transaction);
+    this.balance += amount;
+    return transaction;
+  },
+  withdraw(amount) {
+    if (amount > this.balance) {
+      console.log("no money no honey");
+      return;
+    }
+    const transaction = this.createTransaction(amount, Transaction.WITHDRAW);
+    this.transactions.push(transaction);
+    this.balance -= amount;
+    return transaction;
+  },
+  getBalance() {
+    return this.balance;
+  },
+  getTransactionDetails(id) {
+    for (const transaction of this.transactions) {
+      if (transaction.id === id) {
+        return transaction;
+      }
+    }
+    console.log("no transaction with such id");
+  },
+  getTransactionTotal(type) {
+    let sum = 0;
+    for (const transaction of this.transactions) {
+      if (transaction.type === type) {
+        sum += transaction.amount;
+      }
+    }
+    return sum;
+  },
+};
+
+console.log(account.deposit(100));
+console.log(account.deposit(200));
+console.log(account.withdraw(100));
+console.log(account.withdraw(300));
+
+console.log(account.getBalance());
+
+console.log(account.getTransactionDetails(1));
+console.log(account.getTransactionDetails(100));
+console.log(account.getTransactionTotal(Transaction.DEPOSIT));
