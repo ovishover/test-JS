@@ -471,67 +471,109 @@
 // array.splice(oldName, 1, "Dungeon chronicles");
 
 // console.log(array);
-const Transaction = {
-  DEPOSIT: "deposit",
-  WITHDRAW: "withdraw",
+
+// задача с транзакциями по счету
+// const Transaction = {
+//   DEPOSIT: "deposit",
+//   WITHDRAW: "withdraw",
+// };
+
+// const account = {
+//   balance: 0,
+//   transactions: [],
+//   _currentId: 0,
+//   createTransaction(amount, type) {
+//     return {
+//       id: this._currentId++,
+//       amount,
+//       type,
+//     };
+//   },
+//   deposit(amount) {
+//     const transaction = this.createTransaction(amount, Transaction.DEPOSIT);
+//     this.transactions.push(transaction);
+//     this.balance += amount;
+//     return transaction;
+//   },
+//   withdraw(amount) {
+//     if (amount > this.balance) {
+//       console.log("no money no honey");
+//       return;
+//     }
+//     const transaction = this.createTransaction(amount, Transaction.WITHDRAW);
+//     this.transactions.push(transaction);
+//     this.balance -= amount;
+//     return transaction;
+//   },
+//   getBalance() {
+//     return this.balance;
+//   },
+//   getTransactionDetails(id) {
+//     for (const transaction of this.transactions) {
+//       if (transaction.id === id) {
+//         return transaction;
+//       }
+//     }
+//     console.log("no transaction with such id");
+//   },
+//   getTransactionTotal(type) {
+//     let sum = 0;
+//     for (const transaction of this.transactions) {
+//       if (transaction.type === type) {
+//         sum += transaction.amount;
+//       }
+//     }
+//     return sum;
+//   },
+// };
+
+// console.log(account.deposit(100));
+// console.log(account.deposit(200));
+// console.log(account.withdraw(100));
+// console.log(account.withdraw(300));
+
+// console.log(account.getBalance());
+
+// console.log(account.getTransactionDetails(1));
+// console.log(account.getTransactionDetails(100));
+// console.log(account.getTransactionTotal(Transaction.DEPOSIT));
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+  // Change code below this line
+  getPotions() {
+    return Object.values(this.potions);
+  },
+  addPotion(newPotion) {
+    if (this.potions.includes(newPotion)) {
+      return `Error! Potion ${newPotion} is already in your inventory!`;
+    }
+
+    this.potions.push(newPotion);
+  },
+  removePotion(potionName) {
+    const potionIndex = this.potions.indexOf(potionName);
+
+    if (potionIndex === -1) {
+      return `Potion ${potionName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1);
+  },
+  updatePotionName(oldName, newName) {
+    const potionIndex = this.potions.indexOf(oldName);
+
+    if (potionIndex === -1) {
+      return `Potion ${oldName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1, newName);
+  },
+  // Change code above this line
 };
 
-const account = {
-  balance: 0,
-  transactions: [],
-  _currentId: 0,
-  createTransaction(amount, type) {
-    return {
-      id: this._currentId++,
-      amount,
-      type,
-    };
-  },
-  deposit(amount) {
-    const transaction = this.createTransaction(amount, Transaction.DEPOSIT);
-    this.transactions.push(transaction);
-    this.balance += amount;
-    return transaction;
-  },
-  withdraw(amount) {
-    if (amount > this.balance) {
-      console.log("no money no honey");
-      return;
-    }
-    const transaction = this.createTransaction(amount, Transaction.WITHDRAW);
-    this.transactions.push(transaction);
-    this.balance -= amount;
-    return transaction;
-  },
-  getBalance() {
-    return this.balance;
-  },
-  getTransactionDetails(id) {
-    for (const transaction of this.transactions) {
-      if (transaction.id === id) {
-        return transaction;
-      }
-    }
-    console.log("no transaction with such id");
-  },
-  getTransactionTotal(type) {
-    let sum = 0;
-    for (const transaction of this.transactions) {
-      if (transaction.type === type) {
-        sum += transaction.amount;
-      }
-    }
-    return sum;
-  },
-};
-
-console.log(account.deposit(100));
-console.log(account.deposit(200));
-console.log(account.withdraw(100));
-console.log(account.withdraw(300));
-
-console.log(account.getBalance());
-
-console.log(account.getTransactionDetails(1));
-console.log(account.getTransactionDetails(100));
-console.log(account.getTransactionTotal(Transaction.DEPOSIT));
+console.log(atTheOldToad.getPotions());
