@@ -417,6 +417,7 @@
 // // numbers = 10;
 // console.log(numbers);
 
+<<<<<<< Updated upstream
 // const rawObj = {
 //   name: "Moonlight",
 //   radius: 4564,
@@ -577,3 +578,16 @@ const atTheOldToad = {
 };
 
 console.log(atTheOldToad.getPotions());
+=======
+// function getExtremeElements(array) {
+//   // Change code below this line
+//   // const slic =  array.splice(1, array.length - 2)
+//   // return array;
+//   let select = [];
+//   select.push(array[0]);
+//   select.push(array[array.length - 1]);
+//   console.log(select);
+//   // Change code above this line
+// }
+// getExtremeElements(['apple', 'peach', 'pear', 'banana']);
+>>>>>>> Stashed changes
