@@ -417,7 +417,6 @@
 // // numbers = 10;
 // console.log(numbers);
 
-<<<<<<< Updated upstream
 // const rawObj = {
 //   name: "Moonlight",
 //   radius: 4564,
