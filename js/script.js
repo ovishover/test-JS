@@ -474,8 +474,8 @@
 
 // задача с транзакциями по счету
 // const Transaction = {
-//   DEPOSIT: "deposit",
-//   WITHDRAW: "withdraw",
+//   DEPOSIT: 'deposit',
+//   WITHDRAW: 'withdraw',
 // };
 
 // const account = {
@@ -497,7 +497,7 @@
 //   },
 //   withdraw(amount) {
 //     if (amount > this.balance) {
-//       console.log("no money no honey");
+//       console.log('no money no honey');
 //       return;
 //     }
 //     const transaction = this.createTransaction(amount, Transaction.WITHDRAW);
@@ -514,7 +514,7 @@
 //         return transaction;
 //       }
 //     }
-//     console.log("no transaction with such id");
+//     console.log('no transaction with such id');
 //   },
 //   getTransactionTotal(type) {
 //     let sum = 0;
@@ -553,26 +553,40 @@ const atTheOldToad = {
     { name: 'Dragon breath', price: 780 },
     { name: 'Stone skin', price: 520 },
   ],
-  // Change code below this line
-  getPotions() {
-    return this.potions;
-  },
-  addPotion(newPotion) {
-    if (this.potions.includes(newPotion)) {
-      return `Error! Potion ${newPotion} is already in your inventory!`;
-    }
 
+  // createPotion(name, price) {
+  //   return {
+  //     name,
+  //     price,
+  //   };
+  // },
+  getPotions() {
+    // return this.potions;
+    for (const pos of this.potions) {
+      console.log(pos);
+    }
+  },
+
+  addPotion(newPotion) {
+    for (const pot of this.potions) {
+      if (pot.name === newPotion.name) {
+        return `Error! Potion ${newPotion.name} is already in your inventory!`;
+      }
+    }
     this.potions.push(newPotion);
   },
+
   removePotion(potionName) {
-    const potionIndex = this.potions.indexOf(potionName);
-
-    if (potionIndex === -1) {
-      return `Potion ${potionName} is not in inventory!`;
+    for (let i = 0; i < this.potions.length; i += 1) {
+      const potion = this.potions[i];
+      if (potion.name === potionName) {
+        this.potions.splice(i, 1);
+        return;
+      }
     }
-
-    this.potions.splice(potionIndex, 1);
+    return `Potion ${potionName} is not in inventory!`;
   },
+
   updatePotionName(oldName, newName) {
     const potionIndex = this.potions.indexOf(oldName);
 
@@ -582,5 +596,8 @@ const atTheOldToad = {
 
     this.potions.splice(potionIndex, 1, newName);
   },
-  // Change code above this line
 };
+
+// atTheOldToad.removePotion('Dragon breath');
+
+console.table(atTheOldToad.getPotions());
