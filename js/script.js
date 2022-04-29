@@ -595,30 +595,47 @@
 // atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
 // console.table(atTheOldToad.getPotions());
 
-function processCall(recipient, onAvailable, onNotAvailable) {
-  // Имитируем доступность абонента случайным числом
-  const isRecipientAvailable = Math.random() > 0.5;
-  if (!isRecipientAvailable) {
-    onNotAvailable(recipient);
-    return;
-  }
-  onAvailable(recipient);
-}
+// function processCall(recipient, onAvailable, onNotAvailable) {
+//   // Имитируем доступность абонента случайным числом
+//   const isRecipientAvailable = Math.random() > 0.5;
+//   if (!isRecipientAvailable) {
+//     onNotAvailable(recipient);
+//     return;
+//   }
+//   onAvailable(recipient);
+// }
 
-function takeCall(name) {
-  console.log(`Соединяем с ${name}, ожидайте...`);
-  // Логика принятия звонка
-}
+// function takeCall(name) {
+//   console.log(`Соединяем с ${name}, ожидайте...`);
+//   // Логика принятия звонка
+// }
 
-function activateAnsweringMachine(name) {
-  console.log(`Абонент ${name} недоступен, оставьте сообщение.`);
-  // Логика активации автоответчика
-}
+// function activateAnsweringMachine(name) {
+//   console.log(`Абонент ${name} недоступен, оставьте сообщение.`);
+//   // Логика активации автоответчика
+// }
 
-function leaveHoloMessage(name) {
-  console.log(`Абонент ${name} недоступен, записываем голограмму.`);
-  // Логика записи голограммы
-}
+// function leaveHoloMessage(name) {
+//   console.log(`Абонент ${name} недоступен, записываем голограмму.`);
+//   // Логика записи голограммы
+// }
 
-processCall('Манго', takeCall, activateAnsweringMachine);
-processCall('Поли', takeCall, leaveHoloMessage);
+// processCall('Манго', takeCall, activateAnsweringMachine);
+// processCall('Поли', takeCall, leaveHoloMessage);
+
+// function getCommonElements(firstArray, secondArray) {
+//   const commonElements = [];
+//   // Change code below this line
+
+//   firstArray.forEach(function (firstArray) {
+//     if (secondArray.includes(firstArray)) {
+//       commonElements.push(firstArray);
+//     }
+//   });
+
+//   // return commonElements ;
+//   console.log(commonElements);
+//   // Change code above this line
+// }
+
+// getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]);
