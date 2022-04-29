@@ -594,3 +594,20 @@
 // atTheOldToad.removePotion('Dragon breath');
 // atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
 // console.table(atTheOldToad.getPotions());
+
+// function getCommonElements(firstArray, secondArray) {
+//   const commonElements = [];
+//   // Change code below this line
+
+//   firstArray.forEach(function (firstArray) {
+//     if (secondArray.includes(firstArray)) {
+//       commonElements.push(firstArray);
+//     }
+//   });
+
+//   // return commonElements ;
+//   console.log(commonElements);
+//   // Change code above this line
+// }
+
+// getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]);
