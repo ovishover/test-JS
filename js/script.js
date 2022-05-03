@@ -639,3 +639,30 @@
 // }
 
 // getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]);
+
+// function changeEven(numbers, value) {
+//   // Change code below this line
+//   const newArray = [];
+//   numbers.forEach(element => {
+//     if (element % 2 === 0) {
+//       newArray.push((element += value));
+//     } else {
+//       newArray.push(element);
+//     }
+//   });
+//   console.log(newArray);
+//   // Change code above this line
+// }
+
+// function changeEven(numbers, value) {
+//   // Change code below this line
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     if (numbers[i] % 2 === 0) {
+//       numbers[i] = numbers[i] + value;
+//     }
+//   }
+//   console.log(numbers);
+//   // Change code above this line
+// }
+
+// changeEven([44, 13, 81, 92, 36, 54], 100);
