@@ -668,15 +668,15 @@
 // changeEven([44, 13, 81, 92, 36, 54], 100);
 
 // Mod4 task 35
-const players = [
-  { name: "Mango", playtime: 1270, gamesPlayed: 4 },
-  { name: "Poly", playtime: 469, gamesPlayed: 2 },
-  { name: "Ajaz", playtime: 690, gamesPlayed: 3 },
-  { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
-];
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajaz", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
 
-const totalAveragePlaytimePerGame = players.reduce((total, time) => {
-  return total + time.playtime / time.gamesPlayed;
-}, 0);
+// const totalAveragePlaytimePerGame = players.reduce((total, time) => {
+//   return total + time.playtime / time.gamesPlayed;
+// }, 0);
 
-console.log(totalAveragePlaytimePerGame);
+// console.log(totalAveragePlaytimePerGame);
