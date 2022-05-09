@@ -698,3 +698,19 @@
 
 // updateCounter(10, counter.increment);
 // updateCounter(5, counter.decrement);
+
+// const getFriends = (users) => {
+//   const allFriends = users.flatMap((user) => user.friends);
+//   const uniqFriends = allFriends.filter(
+//     (friend, index, array) => array.indexOf(friend) === index
+//   );
+//   return uniqFriends;
+// };
+
+// const getFriends = (users) => {
+//   const allFriends = users.flatMap((user) => user.friends);
+//   const uniqFriends = allFriends.filter(
+//     (friend, index, array) => array.indexOf(friend) === index
+//   );
+//   return uniqFriends;
+// };
