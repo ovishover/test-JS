@@ -715,12 +715,12 @@
 //   return uniqFriends;
 // };
 
-const user = {
-  tag: "Mango",
-  method(value) {
-    console.log(`It is work! ${value}`, this);
-  },
-};
+// const user = {
+//   tag: "Mango",
+//   method(value) {
+//     console.log(`It is work! ${value}`, this);
+//   },
+// };
 
 // const fn2 = function () {
 //   console.log("It is work!", this);
@@ -733,5 +733,20 @@ const user = {
 // const testOff = user.method;
 // console.log(testOff());
 
-console.log(user.method(25), "why undefined?");
+// console.log(user.method(25), "why undefined?");
 // user.method();
+
+// const user = {
+//   tag: 'Mango',
+//   showTag() {
+//     console.log('showTag -> this', this);
+// console.log('showTag -> this', this.tag);
+//   },
+// };
+// user.showTag();
+
+// const outerShowTag = user.showTag();
+
+// outerShowTag();
+
+// console.log(outerShowTag);
