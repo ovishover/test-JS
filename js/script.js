@@ -681,6 +681,7 @@
 
 // console.log(totalAveragePlaytimePerGame);
 
+<<<<<<< Updated upstream
 // const counter = {
 //   value: 0,
 //   increment(value) {
@@ -699,3 +700,20 @@
 
 // updateCounter(10, counter.increment);
 // updateCounter(5, counter.decrement);
+=======
+// const getFriends = (users) => {
+//   const allFriends = users.flatMap((user) => user.friends);
+//   const uniqFriends = allFriends.filter(
+//     (friend, index, array) => array.indexOf(friend) === index
+//   );
+//   return uniqFriends;
+// };
+
+// const getFriends = (users) => {
+//   const allFriends = users.flatMap((user) => user.friends);
+//   const uniqFriends = allFriends.filter(
+//     (friend, index, array) => array.indexOf(friend) === index
+//   );
+//   return uniqFriends;
+// };
+>>>>>>> Stashed changes
