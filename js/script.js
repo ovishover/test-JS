@@ -714,3 +714,24 @@
 //   );
 //   return uniqFriends;
 // };
+
+const user = {
+  tag: "Mango",
+  method(value) {
+    console.log(`It is work! ${value}`, this);
+  },
+};
+
+// const fn2 = function () {
+//   console.log("It is work!", this);
+// };
+// user.method2 = fn2;
+
+// const testOn = user.method();
+// console.log(testOn);
+
+// const testOff = user.method;
+// console.log(testOff());
+
+console.log(user.method(25), "why undefined?");
+// user.method();
