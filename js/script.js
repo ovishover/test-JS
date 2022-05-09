@@ -736,17 +736,18 @@
 // console.log(user.method(25), "why undefined?");
 // user.method();
 
-// const user = {
-//   tag: 'Mango',
-//   showTag() {
-//     console.log('showTag -> this', this);
-// console.log('showTag -> this', this.tag);
-//   },
-// };
+const user = {
+  tag: 'Mango',
+  showTag() {
+    // console.log('showTag -> this', this);
+    // console.log('showTag -> this', this.tag);
+    return 555;
+  },
+};
 // user.showTag();
 
-// const outerShowTag = user.showTag();
+const outerShowTag = user.showTag();
 
 // outerShowTag();
 
-// console.log(outerShowTag);
+console.log(outerShowTag);
