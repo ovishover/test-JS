@@ -736,18 +736,48 @@
 // console.log(user.method(25), "why undefined?");
 // user.method();
 
-const user = {
-  tag: 'Mango',
-  showTag() {
-    // console.log('showTag -> this', this);
-    // console.log('showTag -> this', this.tag);
-    return 555;
-  },
-};
+// const user = {
+//   tag: 'Mango',
+//   showTag() {
+// console.log('showTag -> this', this);
+// console.log('showTag -> this', this.tag);
+//     return 555;
+//   },
+// };
 // user.showTag();
 
-const outerShowTag = user.showTag();
+// const outerShowTag = user.showTag();
 
 // outerShowTag();
 
-console.log(outerShowTag);
+// console.log(outerShowTag);
+
+// function greetGuest(greeting, qwe) {
+//   console.log(`${greeting}, ${qwe}, ${this.username}.`);
+// }
+
+// const mango = {
+//   username: "Манго",
+// };
+// const poly = {
+//   username: "Поли",
+// };
+
+// greetGuest.call(mango, "Добро пожаловать", "dfdsf"); // Добро пожаловать, Манго.
+// greetGuest.call(poly, "С приездом"); // С приездом, Поли.
+
+function greet(clientName) {
+  console.log(`${clientName}, добро пожаловать в «${this.service}».`);
+}
+
+const steam = {
+  service: "Steam",
+};
+// Запис результату виклику методу bind у зміну steamGreeter
+const steamGreeter = greet.bind(steam);
+steamGreeter("Манго");
+
+// Виклик bind без запису у зміну
+greet.bind(steam, "Манго");
+
+steam.greet("Манго");
