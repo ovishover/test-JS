@@ -739,45 +739,70 @@
 // const user = {
 //   tag: 'Mango',
 //   showTag() {
-// console.log('showTag -> this', this);
-// console.log('showTag -> this', this.tag);
+//     // console.log('showTag -> this', this);
+//     // console.log('showTag -> this', this.tag);
 //     return 555;
 //   },
 // };
-// user.showTag();
+// // user.showTag();
 
 // const outerShowTag = user.showTag();
 
-// outerShowTag();
+// // outerShowTag();
 
 // console.log(outerShowTag);
 
-// function greetGuest(greeting, qwe) {
-//   console.log(`${greeting}, ${qwe}, ${this.username}.`);
-// }
+// const adder = {
+//   futureTotal: 9,
+//   base: 30,
+//   // add: function (a) {
+//   //   var f = v => v + this.base;
+//   //   return f(a);
+//   // },
 
-// const mango = {
-//   username: "Манго",
+//   addThruCall(a) {
+//     // var f = v => v + this.futureTotal;
+//     // var f = v => a + this.base;
+
+//     const f = v => v + this.base;
+//     // function fnB(v) {
+//     //   v + this.base;
+//     // }
+
+//     const b = {
+//       base: 10,
+//     };
+//     const df = addThruCall.bind(b, a);
+//     return f.call(b, a); // выводит 33
+
+//     // return fnB.call(b, a);// выводит undefind
+//     // return f(b);         // выводит [object Object]30
+//     // return f(this.base); // выводит 60
+//     // return adder.base;   // выводит 30
+//     // return f(b.base);    // выводит 40
+//     // return f();          // выводит NaN;
+//     // return f(a);         // выводит 33;
+//   },
 // };
-// const poly = {
-//   username: "Поли",
-// };
 
-// greetGuest.call(mango, "Добро пожаловать", "dfdsf"); // Добро пожаловать, Манго.
-// greetGuest.call(poly, "С приездом"); // С приездом, Поли.
+// // console.log(adder.add(4)); // Выводит
+// console.log(adder.addThruCall(3));
 
-function greet(clientName) {
-  console.log(`${clientName}, добро пожаловать в «${this.service}».`);
-}
-
-const steam = {
-  service: "Steam",
+const customer = {
+  firstName: 'Jacob',
+  lastName: 'Mercer',
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;
+  },
 };
-// Запис результату виклику методу bind у зміну steamGreeter
-const steamGreeter = greet.bind(steam);
-steamGreeter("Манго");
 
-// Виклик bind без запису у зміну
-greet.bind(steam, "Манго");
-
-steam.greet("Манго");
+const customer2 = {
+  firstName: 'Alex',
+  lastName: 'Petrov',
+};
+function makeMessage(callback) {
+  // callback() это вызов метода getFullName без объекта
+  console.log(`Обрабатываем заявку от ${callback()}.`);
+}
+makeMessage(customer.getFullName.bind(customer2));
+// makeMessage(customer.getFullName); // Будет ошибка при вызове функции
