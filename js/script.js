@@ -788,21 +788,28 @@
 // // console.log(adder.add(4)); // Выводит
 // console.log(adder.addThruCall(3));
 
-const customer = {
-  firstName: 'Jacob',
-  lastName: 'Mercer',
-  getFullName() {
-    return `${this.firstName} ${this.lastName}`;
-  },
-};
+// const customer = {
+//   firstName: 'Jacob',
+//   lastName: 'Mercer',
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
 
-const customer2 = {
-  firstName: 'Alex',
-  lastName: 'Petrov',
-};
-function makeMessage(callback) {
-  // callback() это вызов метода getFullName без объекта
-  console.log(`Обрабатываем заявку от ${callback()}.`);
+// const customer2 = {
+//   firstName: 'Alex',
+//   lastName: 'Petrov',
+// };
+// function makeMessage(callback) {
+//   // callback() это вызов метода getFullName без объекта
+//   console.log(`Обрабатываем заявку от ${callback()}.`);
+// }
+// makeMessage(customer.getFullName.bind(customer2));
+// // makeMessage(customer.getFullName); // Будет ошибка при вызове функции
+
+let result = 0;
+for (let i = 0; i < 5; i++) {
+  result += i;
+  console.log(`${result} + ${i}`);
 }
-makeMessage(customer.getFullName.bind(customer2));
-// makeMessage(customer.getFullName); // Будет ошибка при вызове функции
+console.log(result);
