@@ -14,23 +14,23 @@
 //   console.log(selectedTag);
 // }
 
-const tagsContainer = document.querySelector('.js-tags');
-let selectedTag = new Set();
-tagsContainer.addEventListener('click', onTagsContainerClick);
+// const tagsContainer = document.querySelector('.js-tags');
+// let selectedTag = new Set();
+// tagsContainer.addEventListener('click', onTagsContainerClick);
 
-function onTagsContainerClick(e) {
-  if (e.target.nodeName !== 'BUTTON') {
-    return;
-  }
-  const btn = e.target;
-  const tag = btn.dataset.value;
-  const isActive = btn.classList.contains('tags__btn--active');
+// function onTagsContainerClick(e) {
+//   if (e.target.nodeName !== 'BUTTON') {
+//     return;
+//   }
+//   const btn = e.target;
+//   const tag = btn.dataset.value;
+//   const isActive = btn.classList.contains('tags__btn--active');
 
-  if (isActive) {
-    selectedTag.delete(tag);
-  } else {
-    selectedTag.add(tag);
-  }
-  btn.classList.toggle('tags__btn--active');
-  console.log(selectedTag);
-}
+//   if (isActive) {
+//     selectedTag.delete(tag);
+//   } else {
+//     selectedTag.add(tag);
+//   }
+//   btn.classList.toggle('tags__btn--active');
+//   console.log(selectedTag);
+// }

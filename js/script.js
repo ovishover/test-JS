@@ -807,9 +807,9 @@
 // makeMessage(customer.getFullName.bind(customer2));
 // // makeMessage(customer.getFullName); // Будет ошибка при вызове функции
 
-let result = 0;
-for (let i = 0; i < 5; i++) {
-  result += i;
-  console.log(`${result} + ${i}`);
-}
-console.log(result);
+// let result = 0;
+// for (let i = 0; i < 5; i++) {
+//   result += i;
+//   console.log(`${result} + ${i}`);
+// }
+// console.log(result);
