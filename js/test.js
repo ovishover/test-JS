@@ -34,3 +34,14 @@
 //   btn.classList.toggle('tags__btn--active');
 //   console.log(selectedTag);
 // }
+
+
+let payablesAray = [
+    {
+        company: "DOW",
+        payables: 0,
+        // invoiceDate: 20.05.2023,
+        // paymentDate: 20.06.2023
+    }
+]
+console.log(payablesAray[0]);
